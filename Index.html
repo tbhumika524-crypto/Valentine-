@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+
+            /* 1. CHANGE BACKGROUND PHOTO BELOW */
+            background-image: ('https://images.unsplash.com/photo-1549490349-8643362247b5'); 
+            
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 { color: #d63384; font-size: 2rem; }
+        .buttons { margin-top: 20px; position: relative; height: 100px; }
+        button { padding: 15px 25px; font-size: 1rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #6c757d; color: white; position: absolute; transition: 0.1s; }
+        img { width: 150px; border-radius: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="mainGif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ4ZjR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpNUMo/giphy.gif">
+        
+        <h1 id="question">Badar, will you be my Valentine?</h1>
+        
+        <div class="buttons">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const question = document.getElementById('question');
+        const mainGif = document.getElementById('mainGif');
+
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        yesBtn.addEventListener('click', () => {
+            question.innerHTML = "Yay! See you on the 14th! ❤️";
+            mainGif.src = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ4ZjR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/MDJ9IbxxvDUQM/giphy.gif";
+            noBtn.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
