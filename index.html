@@ -1,9 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Badar ❤️</title>
+    <title>For Badar🫂❤️</title>
     <style>
         body {
             display: flex;
@@ -12,7 +12,6 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #ffe5ec;
             background-image: url(https://images.unsplash.com/photo-1549490349-8643362247b5); 
             background-size: cover;
             background-position: center;
@@ -27,23 +26,24 @@
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(5px);
-            width: 80%;
-            max-width: 400px;
+            width: 85%;
+            max-width: 350px;
         }
 
         h1 { color: #d63384; font-size: 1.8rem; margin-bottom: 20px; }
-        p { font-size: 1.1rem; color: #555; line-height: 1.6; }
+        p { font-size: 1.1rem; color: #444; line-height: 1.6; font-weight: bold; }
         .buttons { margin-top: 20px; position: relative; height: 60px; }
         button { padding: 15px 25px; font-size: 1rem; border: none; border-radius: 50px; cursor: pointer; font-weight: bold; }
         #yesBtn { background-color: #ff4d6d; color: white; }
         #noBtn { background-color: #6c757d; color: white; position: absolute; margin-left: 10px; }
-        img { width: 140px; border-radius: 15px; margin-bottom: 10px; }
+        .main-img { width: 180px; border-radius: 15px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
     <div class="container" id="mainContainer">
-        <img id="mainGif" src="https://media.giphy.com/media/c76IJLufpNUMo/giphy.gif">
+        <img id="mainGif" class="main-img" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ4ZjR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4bmR4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpNUMo/giphy.gif">
+        
         <h1 id="question">Badar, will you be my Valentine?</h1>
         
         <div class="buttons">
@@ -57,7 +57,6 @@
         const yesBtn = document.getElementById('yesBtn');
         const container = document.getElementById('mainContainer');
 
-        // The "Runaway" No Button Logic
         noBtn.addEventListener('mouseover', () => {
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
@@ -65,17 +64,17 @@
             noBtn.style.top = `${y}px`;
         });
 
-        // The "Yes" Button Logic - Swaps to your sweet message
         yesBtn.addEventListener('click', () => {
             container.innerHTML = `
                 <img src="https://media.giphy.com/media/KztT2c4u8mYYUiCiJC/giphy.gif" style="width: 150px;">
-                <h1>I love you, Badar!😘❤️</h1>
-                <p>sorry derai ruwako xu tei ni aajai ruwauxu ruwayeni maya chai garxu hai aba ticket katdenu ani aauxu vetna chai❤️👨‍❤️‍💋‍👨 I love you tapai le vanu vako jastai xodera jadena tension na lenu insecure ra unsafe fell nagarnu college gako bela derai narisaun </p>
+                <h1>I love you, Badar!😘🫂❤️</h1>
+                <p>sorry derai ruwako xu tei ni aajai ruwauxu.ruwayeni maya chai garxu hai aba ticket katdenu ani aauxu vetna chai❤️👨‍❤️‍💋‍👨 I love you tapai le vanu vako jastai xodera jadena tension na lenu insecure ra unsafe fell nagarnu college gako bela derai narisaun</p>
             `;
         });
     </script>
 </body>
 </html>
+
 
 
 
